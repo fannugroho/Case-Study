@@ -1,0 +1,21 @@
+<div class="main posts-new">
+    <div class="container">
+
+        <%= form_tag("/stock/create") do %>
+        <div class="form">
+            <div class="form-body">
+                <label>Title</label>
+                <input name="judul" required>
+
+                <label>Description</label>
+                <textarea name="deskripsi" required></textarea>
+
+                <button type="submit" class="button-16">save data</button> <br>
+                <button class="button-16"> <a href="/stock/index">back</a></button> 
+
+            </div>
+        </div>
+        <% end %>
+
+    </div>
+</div>

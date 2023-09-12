@@ -1,0 +1,29 @@
+
+
+<div class="main posts-index">
+    <div class="container">
+        <p><%= flash[:pesan] %></p>
+        <button class="button-16"><a href="/stock/input">Input Data</a></button>
+        <table border="2">
+            <tr>
+                <th>No</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <% 
+            no=0
+            @data.each do |value| %>
+            <tr>
+                <td><%= no= no+1 %></td>
+                <td><%= value.judul %></td>
+                <td><%= value.deskripsi %></td>
+                <td>
+                    <a href="/stock/detail/<%= value.id %>"><button class="button-16">Detail</button></a>
+                    <a href="/stock/edit/<%= value.id %>"><button class="button-16">Edit</button></a>
+                    <a href="/stock/delete/<%= value.id %>" OnClick="return confirm('Do you want to delete this...?')"><button class="button-16">Delete</button></a>
+                </td>
+            </tr>
+            <%end%>
+        </table>
+    </div>

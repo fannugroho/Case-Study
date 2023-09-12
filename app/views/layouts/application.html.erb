@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookstore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <header>
+    <div class="header-logo">
+        <a href="/">BOOKSTORE</a>
+    </div>
+
+     <div class="header-menus">
+        <li>
+            <button class="button-89"><a href="/">Home</a></button>
+        </li>
+        <li>
+            <button class="button-89"><a href="/kategori">Category</a></button>
+        </li>
+        <li>
+            <button class="button-89"><a href="/stock/index">Stock</a></button>
+        </li>
+        <li>
+            <button class="button-89"><a href="/about">About</a></button>
+        </li>
+    </div>
+</header>
+
+    <%= yield %>
+  </body>
+</html>

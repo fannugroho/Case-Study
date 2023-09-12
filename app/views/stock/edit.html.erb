@@ -1,0 +1,21 @@
+<div class="main posts-new">
+    <div class="container">
+        <h1>Edit Data</h1>
+        <%= form_tag("/stock/update/#{@data.id}") do %>
+        <div class="form">
+            <div class="form-body">
+                <label>Title</label>
+                <input name="judul" value="<%= @data.judul %>" required>
+
+                <label>Description</label>
+                <textarea name="deskripsi" required><%= @data.deskripsi %></textarea>
+
+                <button type="submit" class="button-16">save data</button> <br>
+                <button class="button-16"><a href="/stock/index">back</a></button> 
+
+            </div>
+        </div>
+        <% end %>
+
+    </div>
+</div>

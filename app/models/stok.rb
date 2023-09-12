@@ -1,0 +1,3 @@
+class Stok < ApplicationRecord
+
+end
